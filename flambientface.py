@@ -40,13 +40,14 @@ min_size = (20, 20)
 image_scale = 2
 haar_scale = 1.2
 min_neighbors = 2
-haar_flags = 0
+# haar_flags = 0 # to detect all objects
+haar_flags = cv.CV_HAAR_FIND_BIGGEST_OBJECT # to detect only one
 
 def detect_and_draw(img, cascade):
     # allocate temporary images
     gray = cv.CreateImage((img.width,img.height), 8, 1)
     small_img = cv.CreateImage((cv.Round(img.width / image_scale),
-  		       cv.Round (img.height / image_scale)), 8, 1)
+    		       cv.Round (img.height / image_scale)), 8, 1)
 
     # convert color input image to grayscale
     cv.CvtColor(img, gray, cv.CV_BGR2GRAY)
