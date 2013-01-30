@@ -1,7 +1,7 @@
 flambientface
 =============
 
-Quick hack to flambient a face from webcam or file
+Quick hack to flambient a face from webcam or file, and optionally animate a gif.
 
 Requirements
 ---
@@ -25,6 +25,8 @@ Options:
   -t TILE_SIZE, --tile-size=TILE_SIZE
                         Tile size (should be divisible by 2. Use 0 to guess
                         based on image size).
+  -o OUTFILE, --outfile=OUTFILE
+                        Output filename of animated gif
 ```
 
 Examples
@@ -49,4 +51,8 @@ Run on a webcam and guess the tile size:
 Run on a webcam and detect noses:
 
 ```flambientface.py 1 -c \temp\opencv\data\haarcascades\haarcascade_mcs_nose.xml```
+
+Run on a webcam and create an animated gif afterwards (requires ImageMagick's `convert`):
+
+```flambientface.py 1 -o out.gif```
 
