@@ -6,10 +6,10 @@ Quick hack to flambient a face from webcam or file, and optionally animate a gif
 Requirements
 ---
 
- *  OpenCV,  
- * PIL, 
+ * OpenCV,
+ * Pillow,
  * Triangulizor (do `pip install triangulizor`)
- 
+
 Usage
 ---
 You may need to edit the default cascade location, or use -c to point to it.
